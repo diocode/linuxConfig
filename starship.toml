@@ -23,9 +23,9 @@ truncation_length = 4
 truncation_symbol = "…/"
 
 [git_branch]
-style = "bg:#FCF392"  # Matte Blue
+style = "bg:#FCF392"
 format = '[[ $symbol $branch ](fg:#1C3A5E bg:#FCF392)]($style)'
 
 [git_status]
-style = "bg:#FCF392"  # Matte Blue
+style = "bg:#FCF392"
 format = '[[($all_status$ahead_behind )](fg:#1C3A5E bg:#FCF392)]($style)'
