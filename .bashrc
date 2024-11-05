@@ -1,1 +1,1 @@
-export PATH=$PATH:~/.local/bini
+export PATH=$PATH:~/.local/bin
