@@ -1,0 +1,3 @@
+com.mattjakeman.ExtensionManager
+com.stremio.Stremio
+org.gnome.Extensions

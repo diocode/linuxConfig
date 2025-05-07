@@ -1,28 +1,34 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
 format = """
-[ ♡](bg:#e2bef1 fg:#101010)\
-$time\
-[](bg:#F5CDDE fg:#e2bef1)\
+[ 🖿 ](bg:#5B3D7B fg:#D1A6D6)\
 $directory\
-[](fg:#F5CDDE bg:#c6f8e5)\
+[](fg:#5B3D7B bg:#6A4C9C)\
 $git_branch\
-[･✧:･](bg:#c6f8e5 fg:#101010)\
-[ ](fg:#c6f8e5)\
+$git_status\
+[](fg:#6A4C9C bg:#7A4BCF)\
+[ $cmd_duration ](bg:#7A4BCF fg:#E1D9F0)\
+[ ](fg:#7A4BCF)\
 """
 
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:#1d2230"
-format = '[[ $time ](bg:#e2bef1 fg:#101010)]($style)'
-
 [directory]
-style = "fg:#101010 bg:#F5CDDE"
+style = "bg:#5B3D7B fg:#E1D9F0"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+truncation_length = 2
+truncation_symbol = "⋯/"
+truncate_to_repo = false
+home_symbol = "~"
 
 [git_branch]
-style = "bg:#FCF392"
-format = '[[ ✄ $branch ](fg:#101010 bg:#c6f8e5)]($style)'
+symbol = ""
+style = "bg:#6A4C9C fg:#E1D9F0"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#6A4C9C fg:#E1D9F0"
+format = '[$all_status$ahead_behind ]($style)'
+
+[cmd_duration]
+min_time = 100
+format = "$duration"
+style = "bg:#7A4BCF fg:#E1D9F0"
+show_milliseconds = false
+
